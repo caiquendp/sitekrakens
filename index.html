@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krakens | UNIFEI - Engenharia Náutica e Competição</title>
+  <meta name="description"
+    content="Equipe multidisciplinar de desenvolvimento tecnológico e competição náutica da Universidade Federal de Itajubá (UNIFEI).">
+  <meta name="keywords"
+    content="Krakens, UNIFEI, DUNA, Naut-Design, Engenharia Náutica, Robótica Marinha, Competição Universitária, Itajubá">
+  <meta name="author" content="Equipe Krakens UNIFEI">
+
+  <!-- Favicon com o novo escudo oficial da equipe -->
+  <link rel="icon" type="image/png" href="assets/logo_krakens.png">
+
+  <!-- Google Fonts: Inter e Rajdhani (Identidade Institucional Náutica) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       NAVBAR FIXA (Sticky Header com Scrollspy)
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+
+      <!-- Brand / Logo Oficial -->
+      <a href="#inicio" class="nav-brand" id="navBrandLink">
+        <div class="nav-brand-logo-wrap">
+          <img src="assets/logo_krakens.png" alt="Escudo Oficial Krakens UNIFEI" class="nav-brand-logo">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">KRAKENS</span>
+          <span class="nav-brand-sub">UNIFEI</span>
+        </div>
+      </a>
+
+      <!-- Menu de Links com Scrollspy -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#inicio" class="nav-link active" data-i18n="nav_home">Início</a></li>
+          <li><a href="#areas" class="nav-link" data-i18n="nav_areas">Áreas</a></li>
+          <li><a href="#sobre" class="nav-link" data-i18n="nav_about">Sobre</a></li>
+          <li><a href="#apoiadores" class="nav-link" data-i18n="nav_sponsors">Apoiadores</a></li>
+          <li><a href="#contato" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações da Navbar: Seletor de Idioma & Login -->
+      <div class="nav-actions">
+        <!-- Seletor de Idioma [PT | EN] -->
+        <div class="lang-dropdown">
+          <button class="lang-selector-btn" id="langToggleBtn" aria-label="Selecionar Idioma" title="Alternar Idioma">
+            <span id="currentLangLabel">Language ▾</span>
+          </button>
+          <div class="lang-dropdown-menu" id="langMenu">
+            <button class="lang-option active" data-lang="pt">🇧🇷 Português (PT)</button>
+            <button class="lang-option" data-lang="en">🇺🇸 English (EN)</button>
+          </div>
+        </div>
+
+        <!-- Botão Área de Membros -->
+        <button class="btn-members" id="navMembersBtn" title="Área Restrita">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n="nav_members_btn">Área de Membros</span>
+        </button>
+
+        <!-- Botão Hamburger Mobile -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION (Limpo, com Novo Escudo Oficial e sem métricas/tags)
+       ========================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid-lines"></div>
+
+    <div class="container hero-content">
+
+      <!-- Escudo Oficial Central Krakens -->
+      <div class="hero-emblem-wrapper">
+        <div class="hero-emblem-glow"></div>
+        <img src="assets/logo_krakens.png" alt="Escudo Oficial Krakens" class="hero-emblem-img">
+      </div>
+
+      <!-- Título Principal Oficial Exclusivo -->
+      <h1 class="hero-title" data-i18n="hero_title">KRAKENS</h1>
+
+      <!-- Linha Divisória Branca -->
+      <div class="hero-divider"></div>
+
+      <!-- Subtítulo Oficial -->
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Tecnologia - Inovação - Desenvolvimento</p>
+
+      <!-- CTAs de Ação -->
+      <div class="hero-actions">
+        <a href="#areas" class="btn-primary" id="heroCtaAreas">
+          <span data-i18n="hero_cta_areas">Conhecer Áreas</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#apoiadores" class="btn-secondary" id="heroCtaSupport">
+          <span data-i18n="hero_cta_support">Apoiar a Equipe</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        </a>
+        <button class="btn-secondary" id="heroMembersBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          <span data-i18n="nav_members_btn">Área de Membros</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO "ÁREAS" (Fiel a Referencia_area_site.jpeg e Sobreposições)
+       ========================================================================== -->
+  <section class="areas-section" id="areas">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag" data-i18n="areas_tag">Engenharia & Estrutura</span>
+        <h2 class="section-title" data-i18n="areas_title">Áreas</h2>
+        <div class="divider-accent"></div>
+      </div>
+
+      <!-- Grid estrito com os 3 Cards técnicos e efeitos de sobreposição -->
+      <div class="areas-grid">
+
+        <!-- CARD 1: ELETRÔNICA -->
+        <div class="subsystem-card" data-area="eletronica" id="cardEletronica" role="button" tabindex="0"
+          aria-label="Subsistema de Eletrônica">
+          <img src="assets/Logo_Eletronica_Site.jpeg" alt="Logo Eletrônica Krakens" class="subsystem-card-img">
+          <div class="subsystem-overlay">
+            <h3 class="subsystem-overlay-title" data-i18n="area_eletronica_title">ELETRÔNICA</h3>
+            <span class="subsystem-overlay-badge" data-i18n="area_card_badge">Clique para Detalhes</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: MECÂNICA -->
+        <div class="subsystem-card" data-area="mecanica" id="cardMecanica" role="button" tabindex="0"
+          aria-label="Subsistema de Mecânica">
+          <img src="assets/Logo_Mecanica_Site.jpeg" alt="Logo Mecânica Krakens" class="subsystem-card-img">
+          <div class="subsystem-overlay">
+            <h3 class="subsystem-overlay-title" data-i18n="area_mecanica_title">MECÂNICA</h3>
+            <span class="subsystem-overlay-badge" data-i18n="area_card_badge">Clique para Detalhes</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: GESTÃO E MARKETING -->
+        <div class="subsystem-card" data-area="gestao" id="cardGestao" role="button" tabindex="0"
+          aria-label="Subsistema de Gestão e Marketing">
+          <img src="assets/Logo_Gestao_Marketing_Site.jpeg" alt="Logo Gestão e Marketing Krakens"
+            class="subsystem-card-img">
+          <div class="subsystem-overlay">
+            <h3 class="subsystem-overlay-title" data-i18n="area_gestao_title">GESTÃO E MARKETING</h3>
+            <span class="subsystem-overlay-badge" data-i18n="area_card_badge">Clique para Detalhes</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO "SOBRE A KRAKENS" (Foco 100% no Texto Limpo e Bem Diagramado)
+       ========================================================================== -->
+  <section class="about-section section-padding" id="sobre">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag" data-i18n="about_tag">Nossa Trajetória</span>
+        <h2 class="section-title" data-i18n="about_title">Sobre a Krakens</h2>
+        <div class="divider-accent"></div>
+      </div>
+
+      <!-- Texto Oficial Aprovado em Diagramação Nobre e Limpa -->
+      <div class="about-content-single">
+        <p class="about-official-p" data-i18n="about_p1">
+          Fundada por estudantes da Universidade Federal de Itajubá (UNIFEI), a Krakens é uma iniciativa
+          multidisciplinar de desenvolvimento tecnológico e competição náutica, aberta a alunos de todos os cursos da
+          universidade.
+        </p>
+        <p class="about-official-p" data-i18n="about_p2">
+          Nosso foco principal está na concepção, modelagem e construção de embarcações e barcos rebocadores de alta
+          performance para a competição nacional DUNA (Desafio Universitário de Naut-Design). Além do trabalho com
+          engenharia náutica de superfície, a equipe mantém em seu DNA a pesquisa e o desenvolvimento de Veículos
+          Subaquáticos Autônomos (AUVs), visando desafios de robótica marinha como a RoboSub, nos Estados Unidos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO "APOIADORES & PARCEIROS"
+       ========================================================================== -->
+  <section class="sponsors-section" id="apoiadores">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag" data-i18n="sponsors_tag">Parcerias Estratégicas</span>
+        <h2 class="section-title" data-i18n="sponsors_title">Apoiadores & Parceiros</h2>
+        <div class="divider-accent"></div>
+      </div>
+
+      <!-- Banner Estilizado Oficial -->
+      <div class="sponsors-banner-box">
+        <p class="sponsors-banner-text" data-i18n="sponsors_banner_text">
+          Espaço reservado para apoiadores e parceiros estratégicos que impulsionam a engenharia náutica da Krakens.
+          Entre em contato para apoiar.
+        </p>
+        <a href="#contato" class="sponsors-cta-btn">
+          <span data-i18n="sponsors_cta_btn">Seja um Parceiro Oficial</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Grid Modular de Parceiros -->
+      <div class="sponsors-grid" id="sponsorsGrid">
+        <!-- Renderizado por app.js através de sponsorsData -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SEÇÃO "CONTATO"
+       ========================================================================== -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-tag" data-i18n="contact_tag">Fale Conosco</span>
+        <h2 class="section-title" data-i18n="contact_title">Entre em Contato</h2>
+        <p class="section-subtitle" data-i18n="contact_desc">Interessado em patrocinar, realizar parcerias técnicas ou
+          ingressar na equipe? Envie-nos uma mensagem.</p>
+        <div class="divider-accent"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Cartão de Informações Oficiais da Equipe -->
+        <div class="contact-info-card">
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-title" data-i18n="contact_email_title">E-mail Institucional</div>
+              <a href="mailto:krakens@unifei.edu.br" class="contact-item-value"
+                style="color:var(--cyan-electric);">krakens@unifei.edu.br</a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-title" data-i18n="contact_loc_title">Sede / Localização</div>
+              <div class="contact-item-value" data-i18n="contact_loc_value">UNIFEI - Universidade Federal de Itajubá,
+                Campus José Rodrigues Seabra, Itajubá - MG</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-title" data-i18n="contact_social_title">Redes Oficiais</div>
+              <div class="contact-item-value">Instagram: <a href="https://instagram.com/krakensunifei" target="_blank"
+                  rel="noopener noreferrer" style="color:var(--cyan-electric);">@krakensunifei</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulário de Contato -->
+        <div class="contact-form-box">
+          <form id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="contactName" data-i18n="form_name_label">Seu Nome Completo</label>
+              <input type="text" id="contactName" class="form-input" required placeholder="Eng. João Silva">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactEmail" data-i18n="form_email_label">Seu E-mail</label>
+              <input type="email" id="contactEmail" class="form-input" required placeholder="contato@empresa.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactSubject" data-i18n="form_subject_label">Assunto</label>
+              <input type="text" id="contactSubject" class="form-input" required
+                placeholder="Proposta de Patrocínio / Parceria Técnica">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage" data-i18n="form_message_label">Mensagem</label>
+              <textarea id="contactMessage" class="form-textarea" required
+                placeholder="Olá equipe Krakens, gostaríamos de apoiar os projetos náuticos..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit-btn" style="width:100%;">
+              <span data-i18n="form_submit_btn">Enviar Mensagem</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ÁREA EXCLUSIVA DE MEMBROS (PORTAL PÓS-LOGIN DESBLOQUEADO)
+       ========================================================================== -->
+  <section class="portal-section" id="portalSection">
+    <div class="container">
+
+      <!-- Barra Superior do Portal -->
+      <div class="portal-header-bar">
+        <div class="portal-user-info">
+          <div class="portal-user-avatar" id="portalUserAvatar">K</div>
+          <div>
+            <div class="portal-user-name" id="portalUserEmail">krakens@unifei.edu.br</div>
+            <div class="portal-user-role" data-i18n="portal_welcome_role">Membro Oficial Krakens - UNIFEI</div>
+          </div>
+        </div>
+        <button class="btn-logout" id="portalLogoutBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          <span data-i18n="portal_logout_btn">Sair da Sessão</span>
+        </button>
+      </div>
+
+      <!-- Abas Principais: BARCOS vs INFORMAÇÕES DA EQUIPE -->
+      <div class="portal-main-tabs">
+        <button class="portal-main-tab-btn active" data-tab="tabBoats">
+          🚢 <span data-i18n="portal_tab_boats">BARCOS</span>
+        </button>
+        <button class="portal-main-tab-btn" data-tab="tabTeamHub">
+          📂 <span data-i18n="portal_tab_hub">INFORMAÇÕES DA EQUIPE</span>
+        </button>
+      </div>
+
+      <!-- PAINEL 1: BARCOS -->
+      <div class="portal-tab-content active" id="tabBoats">
+
+        <!-- Sub-abas: 2026, 2027 -->
+        <div class="boats-sub-tabs">
+          <button class="boat-tab-btn active" data-boat="2026">
+            Barco 2026 (Aposentado)
+          </button>
+          <button class="boat-tab-btn" data-boat="2027">
+            Barco 2027 (Ativo)
+          </button>
+        </div>
+
+        <!-- BARCO 2026 (APOSENTADO) -->
+        <div class="boat-detail-panel active" id="boat-2026">
+          <div class="boat-banner-header">
+            <div class="boat-title-area">
+              <h3 data-i18n="boat_2026_title">Barco 2026 - Aposentado</h3>
+              <p>Sistema Funcional</p>
+            </div>
+            <span class="boat-status-tag status-design">● Aposentado</span>
+          </div>
+
+          <div class="boat-specs-grid">
+            <div class="spec-box">
+              <div class="spec-box-label">Material</div>
+              <div class="spec-box-value">Fibra de vidro</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Estimativa de Massa</div>
+              <div class="spec-box-value">15.8 kg</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Tamanho</div>
+              <div class="spec-box-value">Largura: </div>
+              <div class="spec-box-value">Comprimento: </div>
+            </div>
+          </div>
+
+          <!-- SEÇÃO DE RESULTADOS DUNA 2026 -->
+          <div class="boat-results-section">
+            <h4 class="boat-results-heading">RESULTADOS:</h4>
+
+            <div class="boat-results-grid">
+              <!-- Ranking Geral -->
+              <div class="result-card result-card-highlight">
+                <div class="result-card-header">
+                  <span class="result-card-label">Ranking Geral</span>
+                  <span class="result-tag-cyan">Oficial DUNA</span>
+                </div>
+                <div class="result-card-placement">13º Lugar</div>
+                <div class="result-card-metrics">
+                  <span class="metric-highlight">448 pontos</span>
+                </div>
+              </div>
+
+              <!-- Prova de Projetos -->
+              <div class="result-card">
+                <div class="result-card-header">
+                  <span class="result-card-label">Prova de Projetos</span>
+                </div>
+                <div class="result-card-placement">14º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Nota com peso: <strong>160</strong></span>
+                </div>
+              </div>
+
+              <!-- Bollard Pull (Força de Estaca) -->
+              <div class="result-card">
+                <div class="result-card-header">
+                  <span class="result-card-label">Bollard Pull (Força de Estaca)</span>
+                </div>
+                <div class="result-card-placement">8º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Força: <strong>2,253</strong></span>
+                  <span class="metric-divider">|</span>
+                  <span>Nota com peso: <strong>60</strong></span>
+                </div>
+              </div>
+
+              <!-- Tomada de Tempo -->
+              <div class="result-card result-card-podium">
+                <div class="result-card-header">
+                  <span class="result-card-label">Tomada de Tempo</span>
+                  <span class="result-tag-podium">🥉 3º Lugar</span>
+                </div>
+                <div class="result-card-placement">3º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Tempo: <strong>107s</strong></span>
+                  <span class="metric-divider">|</span>
+                  <span>Nota com peso: <strong>37,5</strong></span>
+                </div>
+              </div>
+
+              <!-- Manobrabilidade -->
+              <div class="result-card result-card-champion">
+                <div class="result-card-header">
+                  <span class="result-card-label">Manobrabilidade</span>
+                  <span class="result-tag-champion">🥇 1º Lugar</span>
+                </div>
+                <div class="result-card-placement placement-champion">1º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Tempo: <strong>47s</strong></span>
+                  <span class="metric-divider">|</span>
+                  <span>Nota com peso: <strong>150</strong></span>
+                </div>
+              </div>
+
+              <!-- Prova Surpresa -->
+              <div class="result-card">
+                <div class="result-card-header">
+                  <span class="result-card-label">Prova Surpresa</span>
+                </div>
+                <div class="result-card-placement">12º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Tempo: <strong>37s</strong></span>
+                  <span class="metric-divider">|</span>
+                  <span>Nota com peso: <strong>18</strong></span>
+                </div>
+              </div>
+
+              <!-- Cabo de Guerra -->
+              <div class="result-card">
+                <div class="result-card-header">
+                  <span class="result-card-label">Cabo de Guerra</span>
+                </div>
+                <div class="result-card-placement">24º Lugar</div>
+                <div class="result-card-metrics">
+                  <span>Nota com peso: <strong>22,5</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BARCO 2027 (P&D ROBÓTICA SUBAQUÁTICA AUV) -->
+        <div class="boat-detail-panel" id="boat-2027">
+          <div class="boat-banner-header">
+            <div class="boat-title-area">
+              <h3 data-i18n="boat_2027_title">Barco 2027 - P&D Robótica Subaquática (AUV)</h3>
+              <p>Veículo Subaquático Autônomo para pesquisa e desafios RoboSub</p>
+            </div>
+            <span class="boat-status-tag status-research">● Pesquisa & Desenvolvimento</span>
+          </div>
+
+          <p class="boat-desc-block" data-i18n="boat_2027_desc">
+            Veículo Subaquático Autônomo desenvolvido para inspeção e desafios internacionais de robótica marinha
+            (RoboSub). Provido de 6 propulsores magnéticos vedados, câmeras subaquáticas estereoscópicas e navegação com
+            IA embarcada.
+          </p>
+
+          <div class="boat-specs-grid">
+            <div class="spec-box">
+              <div class="spec-box-label">Arquitetura de Controle</div>
+              <div class="spec-box-value">ROS 2 Humble</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Computador de Bordo</div>
+              <div class="spec-box-value">Nvidia Jetson Orin</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Graus de Liberdade</div>
+              <div class="spec-box-value">6 DoF Vetorial</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Profundidade Máxima</div>
+              <div class="spec-box-value">30 metros</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Visão Computacional</div>
+              <div class="spec-box-value">Câmeras Estéreo + Sonar</div>
+            </div>
+            <div class="spec-box">
+              <div class="spec-box-label">Casco de Pressão</div>
+              <div class="spec-box-value">Acrílico & Alumínio Náutico</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAINEL 2: INFORMAÇÕES DA EQUIPE (4 PASTAS INTERNAS) -->
+      <div class="portal-tab-content" id="tabTeamHub">
+        <div class="folders-grid" id="teamFoldersGrid">
+
+          <!-- PASTA 1: REGIMENTO INTERNO -->
+          <div class="folder-card" id="folderRegimento">
+            <div>
+              <div class="folder-header">
+                <div class="folder-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    <line x1="8" y1="6" x2="16" y2="6" />
+                    <line x1="8" y1="10" x2="16" y2="10" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="folder-tag" data-i18n="folder_1_tag">Pasta 1</span>
+                  <h4 class="folder-title" data-i18n="folder_1_title">Regimento Interno</h4>
+                </div>
+              </div>
+              <p class="folder-desc" data-i18n="folder_1_desc">Documento oficial de regras e diretrizes da equipe (espaço preparado para adicionar o documento PDF posteriormente).</p>
+
+              <div class="documents-list">
+                <!-- Slot preparado para upload posterior do Regimento Interno -->
+                <div class="doc-item slot-reserved">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Regimento Interno Krakens.pdf</div>
+                      <div class="doc-badge badge-reserved" data-i18n="doc_regimento_status">PDF &bull; Espaço Reservado / Em Breve</div>
+                    </div>
+                  </div>
+                  <span class="btn-doc-download btn-doc-reserved" title="Espaço preparado para upload do PDF oficial" data-i18n="doc_btn_reserved">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Em Breve</span>
+                  </span>
+                </div>
+
+                <div class="folder-notice-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="16" x2="12" y2="12" />
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                  </svg>
+                  <span data-i18n="folder_1_notice">Espaço estruturado para inserção direta do PDF homologado pela diretoria.</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-folder-action" id="btnOpenRegModal" style="margin-top:1.25rem;">
+              <span data-i18n="folder_1_btn">Regulamentos de Competição</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- PASTA 2: ELETRÔNICA -->
+          <div class="folder-card" id="folderEletronica">
+            <div>
+              <div class="folder-header">
+                <div class="folder-icon teal">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <rect x="9" y="9" width="6" height="6" />
+                    <line x1="9" y1="1" x2="9" y2="4" />
+                    <line x1="15" y1="1" x2="15" y2="4" />
+                    <line x1="9" y1="20" x2="9" y2="23" />
+                    <line x1="15" y1="20" x2="15" y2="23" />
+                    <line x1="20" y1="9" x2="23" y2="9" />
+                    <line x1="20" y1="14" x2="23" y2="14" />
+                    <line x1="1" y1="9" x2="4" y2="9" />
+                    <line x1="1" y1="14" x2="4" y2="14" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="folder-tag" data-i18n="folder_2_tag">Pasta 2</span>
+                  <h4 class="folder-title" data-i18n="folder_2_title">Eletrônica</h4>
+                </div>
+              </div>
+              <p class="folder-desc" data-i18n="folder_2_desc">Arquivos e documentações técnicas do subsistema de Eletrônica e Telemetria.</p>
+
+              <div class="documents-list">
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Esquemáticos & PCB - Telemetria.pdf</div>
+                      <div class="doc-badge">PDF &bull; Sensores & Telemetria</div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn-doc-download" title="Acessar Esquemáticos">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Firmware & Controle ROS 2.pdf</div>
+                      <div class="doc-badge">PDF &bull; Software Embarcado</div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn-doc-download" title="Acessar Firmware">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Manual de Baterias LiFePO4.pdf</div>
+                      <div class="doc-badge">PDF &bull; Segurança & Potência</div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn-doc-download" title="Acessar Manual">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://github.com/krakens-unifei" target="_blank" rel="noopener noreferrer" class="btn-folder-action" style="margin-top:1.25rem; text-decoration:none;">
+              <span>Repositório GitHub Eletrônica</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- PASTA 3: MECÂNICA -->
+          <div class="folder-card" id="folderMecanica">
+            <div>
+              <div class="folder-header">
+                <div class="folder-icon orange">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="folder-tag" data-i18n="folder_3_tag">Pasta 3</span>
+                  <h4 class="folder-title" data-i18n="folder_3_title">Mecânica</h4>
+                </div>
+              </div>
+              <p class="folder-desc" data-i18n="folder_3_desc">Arquivos, projetos CAD, simulações e documentações do subsistema de Mecânica.</p>
+
+              <div class="documents-list">
+                <!-- Arquivo real existente em assets -->
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Resultados duna_2026.pdf</div>
+                      <div class="doc-badge badge-highlight">PDF &bull; Competição DUNA Oficial (475 KB)</div>
+                    </div>
+                  </div>
+                  <a href="assets/Resultados%20duna_2026.pdf" download="Resultados duna_2026.pdf" target="_blank" class="btn-doc-download" title="Baixar Resultados DUNA">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Modelagem CAD & Casco Náutico.pdf</div>
+                      <div class="doc-badge">SolidWorks / STEP &bull; Estrutura</div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn-doc-download" title="Baixar Projetos CAD">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Simulação Estrutural & CFD.pdf</div>
+                      <div class="doc-badge">Ansys &bull; Análise de Reboque</div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn-doc-download" title="Baixar Simulações">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://drive.google.com/drive/folders/1EfLN3P0GHC8IE23p1Pnbsl7dvsW2Ap6O" target="_blank" rel="noopener noreferrer" class="btn-folder-action" style="margin-top:1.25rem; text-decoration:none;">
+              <span>Arquivos CAD no Drive</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- PASTA 4: GESTÃO E MARKETING -->
+          <div class="folder-card" id="folderGestaoMarketing">
+            <div>
+              <div class="folder-header">
+                <div class="folder-icon purple">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="folder-tag" data-i18n="folder_4_tag">Pasta 4</span>
+                  <h4 class="folder-title" data-i18n="folder_4_title">Gestão e Marketing</h4>
+                </div>
+              </div>
+              <p class="folder-desc" data-i18n="folder_4_desc">Documentações administrativas, links e arquivos de marketing da equipe.</p>
+
+              <div class="documents-list">
+                <!-- ARQUIVO EM DESTAQUE ESPECIAL SOLICITADO PELO USUÁRIO -->
+                <div class="doc-item featured">
+                  <div class="doc-info">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <div>
+                      <div class="doc-name highlight-text">Memorial descritivo de Marketing.pdf</div>
+                      <div class="doc-badge badge-highlight">⭐ Documento Oficial &bull; Assets (1.8 MB)</div>
+                    </div>
+                  </div>
+                  <a href="assets/Memorial%20descritivo%20de%20Marketing.pdf" download="Memorial descritivo de Marketing.pdf" target="_blank" class="btn-doc-download featured-btn" title="Baixar Memorial Descritivo de Marketing">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <!-- Planilha Oficial de Membros Atualizada -->
+                <div class="doc-item">
+                  <div class="doc-info">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="8" y1="13" x2="16" y2="13" />
+                      <line x1="8" y1="17" x2="16" y2="17" />
+                      <line x1="10" y1="9" x2="8" y2="9" />
+                    </svg>
+                    <div>
+                      <div class="doc-name">Membros_Krakens_26_2.xlsx</div>
+                      <div class="doc-badge">Planilha Oficial &bull; E-mails & Matrículas</div>
+                    </div>
+                  </div>
+                  <a href="assets/Membros_Krakens_26_2.xlsx" download="Membros_Krakens_26_2.xlsx" class="btn-doc-download" title="Baixar Planilha de Membros">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download</span>
+                  </a>
+                </div>
+
+                <!-- Links Rápidos de Gestão -->
+                <div class="member-tools-grid" style="margin-top:0.25rem;">
+                  <a href="https://drive.google.com/drive/folders/1EfLN3P0GHC8IE23p1Pnbsl7dvsW2Ap6O" target="_blank" rel="noopener noreferrer" class="btn-tool-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z" />
+                    </svg>
+                    <span>Google Drive</span>
+                  </a>
+                  <button type="button" class="btn-tool-link" id="btnOpenContactsModal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span data-i18n="folder_4_btn">Contatos Úteis</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (Limpo com Nova Logo Oficial e Nome Krakens)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Coluna 1: Marca & UNIFEI -->
+        <div class="footer-brand-wrap">
+          <div class="footer-logo-row">
+            <img src="assets/logo_krakens.png" alt="Escudo Oficial Krakens" class="footer-logo-img">
+            <span class="footer-logo-title">KRAKENS</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Equipe de competição e desenvolvimento de tecnologia náutica da Universidade Federal de Itajubá.
+          </p>
+          <div style="font-size:0.85rem; color:var(--cyan-electric); font-family:var(--font-tech); font-weight:700;">
+            UNIVERSIDADE FEDERAL DE ITAJUBÁ - UNIFEI
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_nav_title">Navegação</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio" class="footer-link" data-i18n="nav_home">Início</a></li>
+            <li><a href="#areas" class="footer-link" data-i18n="nav_areas">Áreas</a></li>
+            <li><a href="#sobre" class="footer-link" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="#apoiadores" class="footer-link" data-i18n="nav_sponsors">Apoiadores</a></li>
+            <li><a href="#contato" class="footer-link" data-i18n="nav_contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Subsistemas -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_subs_title">Subsistemas</h4>
+          <ul class="footer-links-list">
+            <li><a href="#areas" class="footer-link">Eletrônica & Telemetria</a></li>
+            <li><a href="#areas" class="footer-link">Mecânica & Hidrodinâmica</a></li>
+            <li><a href="#areas" class="footer-link">Gestão & Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Contato & Redes -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="contact_social_title">Redes Oficiais</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://instagram.com/krakensunifei" target="_blank" rel="noopener noreferrer"
+                class="footer-link">📸 Instagram @krakensunifei</a></li>
+            <li><a href="mailto:krakens@unifei.edu.br" class="footer-link">✉️ krakens@unifei.edu.br</a></li>
+            <li><a href="https://unifei.edu.br" target="_blank" rel="noopener noreferrer" class="footer-link">🏛️ Portal
+                Oficial UNIFEI</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Rodapé Inferior -->
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2025 Krakens UNIFEI. Todos os direitos reservados. Feito com engenharia e paixão
+          náutica.</p>
+        <p style="font-family:var(--font-tech); letter-spacing:0.05em;">DUNA &bull; Engenharia Náutica &bull; UNIFEI</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL DE DETALHES DO SUBSISTEMA (Fiel a Referencia_texto_site.jpeg)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="subsystemModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar Modal">&times;</button>
+
+      <h3 class="modal-title" id="modalTitle">GESTÃO E MARKETING</h3>
+      <div class="modal-accent-bar"></div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Preenchido dinamicamente por app.js -->
+      </div>
+
+      <div class="modal-tech-specs" id="modalSpecs">
+        <!-- Chips técnicos -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE AUTENTICAÇÃO UNIFEI (krakens@unifei.edu.br / 2019)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-modal-card">
+      <button class="modal-close-btn" id="authCloseBtn" aria-label="Fechar">&times;</button>
+
+      <div class="auth-header">
+        <img src="assets/logo_krakens.png" alt="Escudo Krakens" class="auth-shield-logo">
+        <h3 class="auth-title" id="authTitle" data-i18n="auth_title">Área de Membros</h3>
+        <p class="auth-subtitle" data-i18n="auth_subtitle">Acesso restrito para membros da equipe Krakens UNIFEI</p>
+      </div>
+
+      <!-- Caixa de Conta de Teste -->
+      <div class="auth-demo-box">
+        <span class="auth-demo-text" data-i18n="auth_demo_text">Conta: krakens@unifei.edu.br / 2019</span>
+        <button type="button" class="btn-demo-autofill" id="btnDemoAutofill" data-i18n="auth_btn_demo">Preencher
+          Teste</button>
+      </div>
+
+      <!-- Mensagem de Erro -->
+      <div class="auth-error-msg" id="authErrorMsg"></div>
+
+      <!-- Formulário de Login -->
+      <form id="authForm">
+        <div class="form-group">
+          <label class="form-label" for="authEmail" data-i18n="auth_email_label">E-mail Institucional</label>
+          <input type="email" id="authEmail" class="form-input" required placeholder="krakens@unifei.edu.br">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="authPass" data-i18n="auth_pass_label">Código de Acesso</label>
+          <input type="password" id="authPass" class="form-input" required placeholder="••••">
+        </div>
+
+        <button type="submit" class="btn-auth-submit" id="btnAuthSubmit" data-i18n="auth_submit_btn">
+          Acessar Portal do Membro
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL ESPECÍFICO: REGULAMENTOS (Pasta 1)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="regulationsModal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:600px;">
+      <button class="modal-close-btn" id="regCloseBtn" aria-label="Fechar">&times;</button>
+
+      <h3 class="modal-title" data-i18n="modal_reg_title">Regulamentos Oficiais</h3>
+      <div class="modal-accent-bar"></div>
+
+      <p style="text-align:center; color:#475569; font-size:1rem; margin-bottom:1.5rem;" data-i18n="modal_reg_subtitle">
+        Selecione o regulamento de competição para acessar a página oficial:
+      </p>
+
+      <div class="modal-options-list">
+        <a href="https://duna.ufsc.br" target="_blank" rel="noopener noreferrer" class="modal-option-btn">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span>🏆</span>
+            <span data-i18n="modal_reg_duna">Regulamento Oficial DUNA</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+
+        <a href="https://robonation.org/app/programs/robosub/" target="_blank" rel="noopener noreferrer"
+          class="modal-option-btn">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span>🤖</span>
+            <span data-i18n="modal_reg_robosub">Regulamento Oficial RoboSub</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL ESPECÍFICO: CONTATOS ÚTEIS (Pasta 4)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="contactsModal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width:750px;">
+      <button class="modal-close-btn" id="contactsCloseBtn" aria-label="Fechar">&times;</button>
+
+      <h3 class="modal-title" data-i18n="modal_contacts_title">Contatos Internos da Equipe</h3>
+      <div class="modal-accent-bar"></div>
+
+      <p style="text-align:center; color:#475569; font-size:1rem; margin-bottom:1.5rem;"
+        data-i18n="modal_contacts_subtitle">
+        Diretoria e Liderança Krakens - Fale direto pelo WhatsApp:
+      </p>
+
+      <div class="contacts-grid" id="teamContactsGrid">
+        <!-- Renderizado dinamicamente por app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Principal Refatorado -->
+  <script src="app.js"></script>
+</body>
+
+</html>
