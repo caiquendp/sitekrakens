@@ -446,7 +446,7 @@ img {
   background-color: var(--bg-darkest);
 }
 
-.hero-bg {
+/*.hero-bg {
   position: absolute;
   inset: 0;
   background-image: url('assets/Referecia_header_inicio_site.jpeg');
@@ -455,7 +455,7 @@ img {
   filter: brightness(0.3) contrast(1.1);
   z-index: 1;
 }
-
+*/
 .hero-overlay {
   position: absolute;
   inset: 0;
