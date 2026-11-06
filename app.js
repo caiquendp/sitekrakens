@@ -410,7 +410,7 @@ function initI18n() {
   if (langToggleBtn && langMenu) {
     langToggleBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      langMenu.classList.toggle("show");
+      langMenu.classList.open("show");
     });
 
     document.addEventListener("click", () => {
