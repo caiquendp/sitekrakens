@@ -20,8 +20,6 @@ const translations = {
     // Hero Section
     hero_title: "KRAKENS",
     hero_subtitle: "Tecnologia - Inovação - Desenvolvimento",
-    hero_cta_areas: "Conhecer Áreas",
-    hero_cta_support: "Apoiar a Equipe",
 
     // Seção Sobre (Texto Oficial Fornecido)
     about_tag: "Nossa Trajetória",
@@ -31,7 +29,6 @@ const translations = {
     about_p3: "Unindo inovação prática, trabalho em equipe e paixão pela tecnologia náutica, capacitamos nossos membros na resolução de problemas reais de engenharia, manufatura e gestão, impulsionando a formação de excelência dentro e fora da universidade.",
 
     // Seção Áreas
-    areas_tag: "Engenharia & Estrutura",
     areas_title: "Áreas & Subsistemas",
     areas_subtitle: "Nossa equipe opera através de subsistemas integrados de alta especialização técnica.",
     area_eletronica_title: "ELETRÔNICA",
@@ -403,18 +400,19 @@ document.addEventListener("DOMContentLoaded", () => {
 // 6. MOTOR DE INTERNACIONALIZAÇÃO (i18n)
 // ==========================================================================
 function initI18n() {
+  const langDropdown = document.querySelector(".lang-dropdown");
   const langToggleBtn = document.getElementById("langToggleBtn");
   const langMenu = document.getElementById("langMenu");
   const langOptions = document.querySelectorAll(".lang-option");
 
-  if (langToggleBtn && langMenu) {
+  if (langToggleBtn && langDropdown) {
     langToggleBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      langMenu.classList.open("show");
+      langDropdown.classList.toggle("open");
     });
 
     document.addEventListener("click", () => {
-      langMenu.classList.remove("show");
+      langDropdown.classList.remove("open");
     });
   }
 
@@ -423,6 +421,7 @@ function initI18n() {
       const selectedLang = option.getAttribute("data-lang");
       if (selectedLang) {
         setLanguage(selectedLang);
+        if (langDropdown) langDropdown.classList.remove("open");
       }
     });
   });

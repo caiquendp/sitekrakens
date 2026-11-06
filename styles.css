@@ -8,7 +8,7 @@
 
 :root {
   /* ==========================================================================
-     1. PALETA NÁUTICA INSTITUCIONAL (PADRÃO POLI UFRJ / MINERVA NÁUTICA)
+     1. PALETA INSTITUCIONAL NÁUTICA / TECNOLÓGICA
      ========================================================================== */
   
   /* Primária: Azul Marinho Náutico Profundo */
@@ -18,16 +18,24 @@
   --card-navy-hover: #122852;    /* Estado hover dos cartões */
   --card-border: #1E293B;        /* Borda sólida de 1px */
   --card-border-subtle: rgba(255, 255, 255, 0.08);
-  --card-border-hover: #0284C7;
+  --card-border-hover: #B301F4;
 
-  /* Secundária / Acentos: Roxo & Lilás */
+  /* Cores Renomeadas com Fidelidade aos Hexadecimais */
   --purple-dark: #510470;                     /* Roxo escuro profundo */
   --purple-vibrant: #7C17A8;                  /* Roxo médio / Violeta elétrico */
   --magenta-electric: #B301F4;                /* Magenta vibrante / Neon */
   --slate-silver: #AFB8C9;                    /* Cinza ardósia claro / Prata azulado */
   --magenta-subtle: rgba(179, 1, 244, 0.12);  /* Magenta com transparência leve */
   --magenta-border: rgba(179, 1, 244, 0.28);  /* Magenta com transparência para bordas */
-  --slate-silver-light: #AFB8C9;
+  --slate-silver-light: #AFB8C9;              /* Cinza suave de alto contraste */
+
+  /* Mapeamento Semântico (Garante que todo o CSS continue renderizando com as novas cores) */
+  --nautic-blue: var(--purple-vibrant);
+  --ocean-blue: var(--magenta-electric);
+  --ocean-sky: var(--slate-silver);
+  --ocean-subtle: var(--magenta-subtle);
+  --ocean-border: var(--magenta-border);
+  --white-pure: #FFFFFF;                      /* Mantido branco para não apagar textos principais */
 
   /* Destaque Náutico: Laranja Sinalizador Náutico & Pódios */
   --orange-nautic: #EA580C;       /* Laranja de segurança náutica para CTAs */
@@ -41,22 +49,21 @@
   --silver-podium: #94A3B8;      /* 2º Lugar */
   --bronze-podium: #EA580C;      /* 3º Lugar Pódio */
 
-  /* Aliases para Retrocompatibilidade com Nomes Antigos */
-  --cyan-electric: #0284C7;
-  --cyan-glow: rgba(2, 132, 199, 0.25);
-  --cyan-subtle: rgba(2, 132, 199, 0.12);
-  --teal-solid: #006699;
+  /* Aliases e Suportes Extras */
+  --cyan-electric: var(--magenta-electric);
+  --cyan-glow: var(--magenta-border);
+  --cyan-subtle: var(--magenta-subtle);
+  --teal-solid: var(--purple-vibrant);
   --teal-overlay: rgba(7, 16, 38, 0.88);
-  --purple-bright: #7C17A8;
+  --purple-bright: var(--purple-vibrant);
   --purple-main: #5C1E7A;
-  --purple-deep: #4B136D;
+  --purple-deep: var(--purple-dark);
 
   /* Tipografia & Cores de Texto */
   --text-primary: #F8FAFC;       /* Branco off-white de alto contraste */
   --text-secondary: #CBD5E1;     /* Cinza náutico claro */
   --text-muted: #94A3B8;         /* Cinza médio para legendas */
-  --text-dark: #0F172A;          /* Grafite escuro para modais claros */
-
+  --text-dark: #0F172A;
   /* Fontes Institucionais */
   --font-title: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-tech: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
