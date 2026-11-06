@@ -1,12 +1,11 @@
 # sitekrakens teste github
 mudanças a serem feitas:
 remover background -> feito
-arrumar a função linguagem
-adicionar a função de site claro
+arrumar a função linguagem -> feito
 retirar os blocos abaixo de tecnologia e inovação
-aumentar logo
+aumentar logo ->feito
 arrumar os textos do site (sobre cada area, sobre krakens, sobre cada barco)
-inserir mais a cor roxa no site
+inserir mais a cor roxa no site -> feito
 patrocinadores
 
 novidades a serem adicionadas:

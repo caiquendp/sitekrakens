@@ -249,14 +249,6 @@ const subsystemDetails = {
         "We design custom printed circuit boards (PCBs) using KiCad, smart Battery Management Systems (BMS), long-range RF telemetry, and integrate high-performance microcontrollers (STM32/ESP32) alongside embedded computers for autonomous operations."
       ]
     },
-    specs: [
-      "Telemetria RF 915MHz",
-      "PCB Design (KiCad)",
-      "Baterias LiFePO4 & BMS",
-      "Sensoriamento IMU & Sonar",
-      "STM32 & ESP32",
-      "Controle PID & Filtros Digitais"
-    ]
   },
 
   mecanica: {
@@ -271,14 +263,6 @@ const subsystemDetails = {
         "Our scope encompasses 3D parametric CAD modeling (SolidWorks), Computational Fluid Dynamics (CFD) simulations for hull drag reduction, Finite Element Analysis (FEA), hands-on composite fabrication (fiberglass & carbon fiber), and custom Kort Nozzle thruster assemblies."
       ]
     },
-    specs: [
-      "Modelagem 3D CAD (SolidWorks)",
-      "Simulações CFD & Hidrodinâmica",
-      "Laminação em Fibra de Vidro/Carbono",
-      "Dutos Kort Nozzle",
-      "Análise Estrutural FEA",
-      "Usinagem CNC & Impressão 3D"
-    ]
   },
 
   gestao: {
@@ -293,14 +277,6 @@ const subsystemDetails = {
         "We handle strategic planning via agile methodologies (Scrum and Kanban), financial governance, logistics for national and international competitions, alongside digital branding to elevate Krakens across academia and the marine engineering industry."
       ]
     },
-    specs: [
-      "Planejamento Estratégico Ágil",
-      "Captação de Patrocinadores",
-      "Gestão Financeira & Editais",
-      "Branding & Mídias Digitais",
-      "Logística de Competição",
-      "Endomarketing & Recrutamento"
-    ]
   }
 };
 
@@ -442,6 +418,19 @@ function setLanguage(lang) {
   const langLabel = document.getElementById("currentLangLabel");
   if (langLabel) {
     langLabel.textContent = lang === "pt" ? "PT-BR" : "EN-US";
+  }
+
+  // Se mudar para qualquer idioma diferente de pt, fecha modais de login e recolhe o portal
+  if (lang !== "pt") {
+    const authModal = document.getElementById("authModal");
+    const portalSection = document.getElementById("portalSection");
+    if (authModal) authModal.classList.remove("active");
+    if (portalSection) portalSection.classList.remove("active");
+    document.body.style.overflow = "";
+  } else if (currentMemberUser) {
+    // Se voltar para pt e o usuário estava logado, reativa a visualização
+    const portalSection = document.getElementById("portalSection");
+    if (portalSection) portalSection.classList.add("active");
   }
 
   renderSponsors();

@@ -489,8 +489,8 @@ img {
 /* Escudo Oficial Centralizado (Sóbrio, sem Glow Cibernético) */
 .hero-emblem-wrapper {
   position: relative;
-  width: 255px;
-  height: 255px;
+  width: 510px;
+  height: 510px;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -2289,4 +2289,14 @@ img {
   .modal-card {
     padding: 2rem 1.5rem;
   }
+}
+
+/* ==========================================================================
+   VISIBILIDADE DA ÁREA DE MEMBROS POR IDIOMA (APENAS PT-BR)
+   ========================================================================== */
+html:not([lang="pt-BR"]) #navMembersBtn,
+html:not([lang="pt-BR"]) #heroMembersBtn,
+html:not([lang="pt-BR"]) #authModal,
+html:not([lang="pt-BR"]) #portalSection {
+  display: none !important;
 }
