@@ -20,14 +20,14 @@
   --card-border-subtle: rgba(255, 255, 255, 0.08);
   --card-border-hover: #0284C7;
 
-  /* Secundária / Acentos: Azul Oceano Técnico & Branco Puro */
-  --nautic-blue-dark: #004C75;
-  --nautic-blue: #006699;        /* Azul Politécnica / Marinha Técnica */
-  --ocean-blue: #0284C7;         /* Azul oceano vivo para links e tags */
-  --ocean-sky: #38BDF8;          /* Azul celeste clássico de contraste */
-  --ocean-subtle: rgba(2, 132, 199, 0.12);
-  --ocean-border: rgba(2, 132, 199, 0.28);
-  --white-pure: #FFFFFF;
+  /* Secundária / Acentos: Roxo & Lilás */
+  --purple-dark: #510470;                     /* Roxo escuro profundo */
+  --purple-vibrant: #7C17A8;                  /* Roxo médio / Violeta elétrico */
+  --magenta-electric: #B301F4;                /* Magenta vibrante / Neon */
+  --slate-silver: #AFB8C9;                    /* Cinza ardósia claro / Prata azulado */
+  --magenta-subtle: rgba(179, 1, 244, 0.12);  /* Magenta com transparência leve */
+  --magenta-border: rgba(179, 1, 244, 0.28);  /* Magenta com transparência para bordas */
+  --slate-silver-light: #AFB8C9;
 
   /* Destaque Náutico: Laranja Sinalizador Náutico & Pódios */
   --orange-nautic: #EA580C;       /* Laranja de segurança náutica para CTAs */
@@ -1085,7 +1085,7 @@ img {
 }
 
 .contact-form-box .btn-primary:hover {
-  background: var(--nautic-blue-dark);
+  background: var(--purple-dark);
 }
 
 /* ==========================================================================
@@ -1907,8 +1907,8 @@ img {
 }
 
 .btn-folder-action:hover {
-  background: var(--nautic-blue-dark);
-  border-color: var(--nautic-blue-dark);
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
 }
 
 /* Lista de Documentos Técnicos */
